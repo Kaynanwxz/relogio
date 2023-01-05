@@ -1,13 +1,16 @@
+var digital = document.querySelector('.digital')
 var ph = document.querySelector('.p_h')
 var pm = document.querySelector('.p_m')
 var ps = document.querySelector('.p_s')
-var digital = document.querySelector('.digital')
 
 setInterval((shora,sminutos,ssegundos) => {
     let now = new Date
     let hora = now.getHours()
     let minutos = now.getMinutes()
     let segundos = now.getSeconds()
+    
+    console.log(segundos);
+
 
     if (hora.toString().length < 2) {
         shora = `0${hora}` 
@@ -15,7 +18,6 @@ setInterval((shora,sminutos,ssegundos) => {
 
     if (minutos.toString().length < 2) {
         sminutos = `0${minutos}` 
-        
     }else { sminutos = minutos}
 
     if (segundos.toString().length < 2) {
